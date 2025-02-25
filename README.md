@@ -71,17 +71,15 @@ The project uses the following dependencies:
 - `cupertino_icons`: Provides iOS style icons.
 
 ## Screenshots
-
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
+**Not available for now :) stay tune**
 
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
 
 ## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+Borderless - Transfer Money Solutions
+https://dribbble.com/shots/21188599-Borderless-Transfer-Money-Solutions?utm_source=Clipboard_Shot&utm_campaign=_ahmadsulaiman&utm_content=Borderless%20-%20Transfer%20Money%20Solutions&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=_ahmadsulaiman&utm_content=Borderless%20-%20Transfer%20Money%20Solutions&utm_medium=Social_Share
 
 ## Acknowledgements
 
