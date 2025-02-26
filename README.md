@@ -1,4 +1,4 @@
-# Money Report
+# Verbank 
 
 Welcome to the Verbank Flutter project! This project is designed to help you manage and track your financial transactions with ease. The app features a clean and intuitive user interface, making it simple for users to navigate and use.
 
@@ -86,4 +86,4 @@ Borderless - Transfer Money Solutions
 - [Flutter](https://flutter.dev/)
 - [BLoC](https://bloclibrary.dev/#/)
 
-Thank you for checking out the Money Report project! We hope you find it useful and easy to use.
+Thank you for checking out the Verbank project! We hope you find it useful and easy to use.
