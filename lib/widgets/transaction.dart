@@ -5,13 +5,14 @@ class TransactionContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
     return Expanded(
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
         padding: const EdgeInsets.all(16.0),
-        width: MediaQuery.of(context).size.width - 32.0,
+        width: screenWidth - 32.0,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: const Color(0xFF3A506B).withOpacity(0.9),
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(50.0),
             topRight: Radius.circular(50.0),
@@ -33,7 +34,7 @@ class TransactionContainer extends StatelessWidget {
               children: const [
                 Text(
                   'Transaction',
-                  style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.white),
                 ),
                 Text(
                   'See all',
@@ -46,9 +47,46 @@ class TransactionContainer extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 16.0),
-            const Text(
-              'This is a transaction container',
-              style: TextStyle(fontSize: 16.0),
+            Container(
+              padding: const EdgeInsets.all(16.0),
+              width: screenWidth - 40.0,
+              height: 80,
+              decoration: BoxDecoration(
+                color: const Color(0xFF5C6B73).withOpacity(0.9),
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 40.0,
+                    height: 40.0,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  const SizedBox(width: 16.0),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'Nama',
+                        style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.white),
+                      ),
+                      Text(
+                        'Hari',
+                        style: TextStyle(fontSize: 14.0, color: Colors.white70),
+                      ),
+                    ],
+                  ),
+                  const Spacer(),
+                  const Text(
+                    'Rp. 100.000',
+                    style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

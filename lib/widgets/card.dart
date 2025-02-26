@@ -5,6 +5,7 @@ class CustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -12,22 +13,15 @@ class CustomCard extends StatelessWidget {
           padding: EdgeInsets.only(left: 16.0, top: 8.0),
           child: Text(
             'Account',
-            style: TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 4.0),
           padding: const EdgeInsets.all(16.0),
-          width: MediaQuery.of(context).size.width - 32.0,
-          height: 250.0,
+          width: screenWidth - 32.0,
+          height: screenWidth * 0.6,
           decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black26,
-                blurRadius: 10.0,
-                offset: Offset(0, 4),
-              ),
-            ],
             image: const DecorationImage(
               image: AssetImage('assets/card.png'),
               fit: BoxFit.cover,
