@@ -1,4 +1,4 @@
-# Money Report
+# Verbank 
 
 Welcome to the Verbank Flutter project! This project is designed to help you manage and track your financial transactions with ease. The app features a clean and intuitive user interface, making it simple for users to navigate and use.
 
@@ -71,21 +71,19 @@ The project uses the following dependencies:
 - `cupertino_icons`: Provides iOS style icons.
 
 ## Screenshots
-
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
+**Not available for now :) stay tune**
 
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
 
 ## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+Borderless - Transfer Money Solutions
+- https://dribbble.com/shots/21188599-Borderless-Transfer-Money-Solutions
 
 ## Acknowledgements
 
 - [Flutter](https://flutter.dev/)
 - [BLoC](https://bloclibrary.dev/#/)
 
-Thank you for checking out the Money Report project! We hope you find it useful and easy to use.
+Thank you for checking out the Verbank project! We hope you find it useful and easy to use.
