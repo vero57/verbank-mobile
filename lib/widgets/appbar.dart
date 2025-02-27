@@ -27,7 +27,7 @@ class CustomAppBar extends StatelessWidget {
                 color: Colors.black,
                 shape: BoxShape.circle,
               ),
-              child: const Icon(Icons.notifications, color: Colors.deepPurple, size: 30.0),
+              child: const Icon(Icons.notifications, color: Colors.white, size: 30.0),
             ),
           ],
         ),

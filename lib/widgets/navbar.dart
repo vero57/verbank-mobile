@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
@@ -26,8 +27,13 @@ class NavBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            const Icon(Icons.home, color: Colors.blue, size: 30.0),
-            const Icon(Icons.credit_card, color: Colors.blue, size: 30.0),
+            GestureDetector(
+              onTap: () {
+                context.go('/');
+              },
+              child: const Icon(Icons.home, color: Colors.white, size: 30.0),
+            ),
+            const Icon(Icons.credit_card, color: Colors.white, size: 30.0),
             Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
@@ -36,8 +42,13 @@ class NavBar extends StatelessWidget {
               ),
               child: const Icon(Icons.arrow_upward, color: Colors.white, size: 30.0),
             ),
-            const Icon(Icons.person, color: Colors.blue, size: 30.0),
-            const Icon(Icons.grid_view, color: Colors.blue, size: 30.0),
+            GestureDetector(
+              onTap: () {
+                context.go('/profile');
+              },
+              child: const Icon(Icons.person, color: Colors.white, size: 30.0),
+            ),
+            const Icon(Icons.grid_view, color: Colors.white, size: 30.0),
           ],
         ),
       ),
