@@ -7,6 +7,29 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
+        final String currentRoute = GoRouter.of(context).routerDelegate.currentConfiguration.fullPath;
+
+    Widget buildNavItem(IconData icon, String route) {
+      final bool isSelected = currentRoute == route;
+      return GestureDetector(
+        onTap: () {
+          context.go(route);
+        },
+        child: Container(
+          padding: const EdgeInsets.all(8.0),
+          decoration: BoxDecoration(
+            color: isSelected ? Colors.white : Colors.transparent,
+            shape: BoxShape.circle,
+          ),
+          child: Icon(
+            icon,
+            color: isSelected ? Colors.black : Colors.white,
+            size: 30.0,
+          ),
+        ),
+      );
+    }
+
     return Positioned(
       bottom: 16.0,
       left: screenWidth * 0.05,
@@ -27,28 +50,23 @@ class NavBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
+            buildNavItem(Icons.home, '/'),
+            buildNavItem(Icons.credit_card, '/credit'),
             GestureDetector(
               onTap: () {
-                context.go('/');
+                // Add your action here
               },
-              child: const Icon(Icons.home, color: Colors.white, size: 30.0),
-            ),
-            const Icon(Icons.credit_card, color: Colors.white, size: 30.0),
-            Container(
-              padding: const EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                color: Colors.green,
-                shape: BoxShape.circle,
+              child: Container(
+                padding: const EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  shape: BoxShape.circle,
+                ),
+                child: const Icon(Icons.arrow_upward, color: Colors.white, size: 30.0),
               ),
-              child: const Icon(Icons.arrow_upward, color: Colors.white, size: 30.0),
             ),
-            GestureDetector(
-              onTap: () {
-                context.go('/profile');
-              },
-              child: const Icon(Icons.person, color: Colors.white, size: 30.0),
-            ),
-            const Icon(Icons.grid_view, color: Colors.white, size: 30.0),
+            buildNavItem(Icons.person, '/profile'),
+            buildNavItem(Icons.grid_view, '/grid'),
           ],
         ),
       ),
